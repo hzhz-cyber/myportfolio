@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>손혜진 포트폴리오</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">PORTFOLIO</span>
+      <ul class="nav-links">
+        <li><a href="#about">About me</a></li>
+        <li><a href="#certification">Certification</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- 모바일 드롭다운 -->
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#certification">Certification</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>
+          사람의 이야기를<br>
+          콘텐츠로 연결하는<br>
+          영상 크리에이터 <span class="accent">손혜진</span>
+        </h1>
+        <p class="hero-sub">기획부터 촬영, 편집까지<br>브랜드와 사람의 메시지를 가장 효과적인 영상으로 만듭니다.</p>
+        <div class="hero-btns">
+          <a href="#about" class="btn btn-outline">About me</a>
+          <a href="#projects" class="btn btn-filled">Project 보기 →</a>
+          <a href="#contact" class="btn btn-outline">Contact →</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <!--
+        =====================================================
+        📷 [사진 삽입 위치]
+        아래 <img> 태그의 src 속성에 본인 사진 경로를 넣어주세요.
+        예: src="images/profile.jpg"
+        현재는 회색 placeholder로 표시됩니다.
+        =====================================================
+        -->
+        <div class="photo-placeholder">
+          <img src="" alt="손혜진 프로필 사진" id="heroProfileImg"
+               onerror="this.style.display='none'" />
+          <div class="photo-placeholder-label">📷 프로필 사진<br>여기에 삽입</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ME ===== -->
+  <section id="about">
+    <div class="section-card">
+      <h2 class="section-title">About me</h2>
+      <p class="section-sub">저는 이야기를 영상으로 전달하는 크리에이터입니다.</p>
+      <hr class="section-divider" />
+      <div class="about-grid">
+        <div class="about-col">
+          <p class="about-col-icon">☆</p>
+          <h3>핵심 역량</h3>
+          <ul>
+            <li>스토리 중심 기획</li>
+            <li>감정 전달이 있는 편집</li>
+            <li>숏폼 콘텐츠 제작</li>
+            <li>브랜드 메시지 시각화</li>
+          </ul>
+        </div>
+        <div class="about-col">
+          <p class="about-col-icon">♡</p>
+          <h3>철학</h3>
+          <ul>
+            <li>보기 좋은 영상보다<br>잘 전달되는 영상</li>
+            <li>화려함보다 목적이 있는 연출</li>
+            <li>트렌드를 활용하되<br>본질을 놓치지 않는 콘텐츠</li>
+          </ul>
+        </div>
+        <div class="about-col">
+          <p class="about-col-icon">◎</p>
+          <h3>방향성</h3>
+          <p>예능, 홍보 콘텐츠 분야로<br>성장하고 싶습니다.</p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <p class="stat-icon">📷</p>
+          <p class="stat-num">30 <span>+</span></p>
+          <p class="stat-label">영상 제작 경험</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-icon">🏆</p>
+          <p class="stat-num">12<span>+</span></p>
+          <p class="stat-label">수상 경력</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-icon">📄</p>
+          <p class="stat-num">5<span>+</span></p>
+          <p class="stat-label">대외활동</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-icon">👥</p>
+          <p class="stat-num">4<span>+</span></p>
+          <p class="stat-label">프로젝트 경험</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATION ===== -->
+  <section id="certification">
+    <div class="section-card">
+      <h2 class="section-title">Certification</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <p class="cert-name">GTQ 포토샵 1급</p>
+          <p class="cert-date">2025.08</p>
+        </div>
+        <div class="cert-card">
+          <p class="cert-name">한국사능력검정시험 1급</p>
+          <p class="cert-date">2025.02</p>
+        </div>
+        <div class="cert-card">
+          <p class="cert-name">운전면허 2종 오토</p>
+          <p class="cert-date">2022.01</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-card">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">아이디어를 결과물로 만드는 도구들</p>
+      <hr class="section-divider" />
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-icon skill-pr">Pr</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          <p class="skill-label">프리미어프로 상급</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon skill-ae">Ae</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          <p class="skill-label">에프터이펙트 중상급</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon skill-ps">Ps</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          <p class="skill-label">포토샵 상급</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon skill-ai">Ai</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          <p class="skill-label">일러스트 중급</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon skill-fg">Fg</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+          <p class="skill-label">피그마 중급</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AWARDS ===== -->
+  <section id="awards">
+    <div class="section-card">
+      <h2 class="section-title">Awards</h2>
+      <p class="section-sub">아이디어가 인정받은 순간들</p>
+      <hr class="section-divider" />
+      <div class="awards-grid">
+
+        <!-- 수상 카드 1 -->
+        <div class="award-card">
+          <p class="award-title">2023 영남대학교<br>영어 홍보 동영상 공모전<br><strong>[대상]</strong></p>
+          <!--
+          =====================================================
+          🎬 [동영상 삽입 위치 1 - 2023 영남대학교 영어 홍보 동영상 공모전 대상]
+          아래 방법 중 하나를 선택하세요:
+
+          방법 A) 유튜브 임베드:
+            <iframe width="100%" height="160"
+              src="https://www.youtube.com/embed/유튜브_영상ID"
+              frameborder="0" allowfullscreen></iframe>
+
+          방법 B) 직접 업로드 영상:
+            <video controls width="100%">
+              <source src="videos/award1.mp4" type="video/mp4">
+            </video>
+          =====================================================
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 1</div>
+        </div>
+
+        <!-- 수상 카드 2 -->
+        <div class="award-card">
+          <p class="award-title">2023 영남대학교 학부<br>영어 홍보 동영상 공모전<br><strong>[최우수상]</strong></p>
+          <!--
+          🎬 [동영상 삽입 위치 2 - 2023 영남대학교 학부 영어 홍보 동영상 공모전 최우수상]
+          위와 동일한 방법으로 삽입하세요.
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 2</div>
+        </div>
+
+        <!-- 수상 카드 3 -->
+        <div class="award-card">
+          <p class="award-title">2024 구룡포 시장<br>숏폼 공모전<br><strong>[대상]</strong></p>
+          <!--
+          🎬 [동영상 삽입 위치 3 - 2024 구룡포 시장 숏폼 공모전 대상]
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 3</div>
+        </div>
+
+        <!-- 수상 카드 4 -->
+        <div class="award-card">
+          <p class="award-title">2024 영남대학교<br>제 2회 동아리 홍보영상 공모전<br><strong>[대상]</strong></p>
+          <!--
+          🎬 [동영상 삽입 위치 4 - 2024 영남대학교 제2회 동아리 홍보영상 공모전 대상]
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 4</div>
+        </div>
+
+        <!-- 수상 카드 5 -->
+        <div class="award-card">
+          <p class="award-title">제 1회 KNOU 숏폼 영상제<br><strong>[최우수상]</strong></p>
+          <!--
+          🎬 [동영상 삽입 위치 5 - 제1회 KNOU 숏폼 영상제 최우수상]
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 5</div>
+        </div>
+
+        <!-- 수상 카드 6 -->
+        <div class="award-card">
+          <p class="award-title">2024 YU 숏폼 챌린지<br><strong>[장려상]</strong></p>
+          <!--
+          🎬 [동영상 삽입 위치 6 - 2024 YU 숏폼 챌린지 장려상]
+          -->
+          <div class="video-placeholder">🎬 동영상 삽입 위치 6</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-card">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">아이디어가 실제 콘텐츠가 되는 과정</p>
+      <hr class="section-divider" />
+
+      <!-- Branding 카테고리 -->
+      <span class="category-tag">Branding</span>
+
+      <!-- 프로젝트 1 -->
+      <div class="project-item">
+        <!--
+        =====================================================
+        🖼️ [썸네일 삽입 위치 1 - 신한은행 대학생 홍보대사]
+        아래 div를 <img> 태그로 교체하거나 background-image를 설정하세요.
+        예: <img src="images/proj1-thumb.jpg" alt="신한은행 홍보대사" class="project-thumb" />
+        =====================================================
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 1</div>
+        <div class="project-info">
+          <h3>신한은행 대학생 홍보대사 43기</h3>
+          <p><span class="info-label">기간</span> 2025.08 ~ 2025.12</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> 대학생의 시선으로 신한은행을 브랜딩</p>
+          <p><span class="info-label">성과</span> 조회수 100만, 10월 활동 우수팀 선정</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 2 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 2 - FC 개는 인스타그램 및 유튜브 운영]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 2</div>
+        <div class="project-info">
+          <h3>FC 개는 인스타그램 및 유튜브 운영</h3>
+          <p><span class="info-label">기간</span> 2024.09 ~ 2025.05</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> 유소년 축구부 홍보</p>
+          <p><span class="info-label">성과</span> 축구부 등록률 상승</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 3 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 3 - YBM프렌즈 3기]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 3</div>
+        <div class="project-info">
+          <h3>대학생 토익 숏폼 크리에이터 'YBM프렌즈 3기'</h3>
+          <p><span class="info-label">기간</span> 2024.12 ~ 2025.02</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> YBM 교재 홍보 쇼츠 제작</p>
+          <p><span class="info-label">성과</span> 최종 우수팀 선정, 이후 외주 의뢰 반응</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 4 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 4 - 박카스 29초 영화제]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 4</div>
+        <div class="project-info">
+          <h3>박카스 29초 영화제 [그럼에도 불구하고 힘껏, 마음껏.]</h3>
+          <p><span class="info-label">기간</span> 2024.08</p>
+          <p><span class="info-label">역할</span> 기획, 촬영</p>
+          <p><span class="info-label">프로젝트 목적</span> 박카스 홍보 영상 제작</p>
+        </div>
+      </div>
+
+      <!-- Team Project 카테고리 -->
+      <span class="category-tag" style="margin-top: 2rem;">Team Project</span>
+
+      <!-- 프로젝트 5 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 5 - 영남대학교 야구부 다큐멘터리]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 5</div>
+        <div class="project-info">
+          <h3>영남대학교 야구부 다큐멘터리 2편 제작</h3>
+          <p><span class="info-label">기간</span> 2023.12 ~ 2025.01</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> 대학 야구부 다큐 제작</p>
+          <p><span class="info-label">성과</span> KBS 열린채널 방영 - [En:try], [The season]</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 6 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 6 - 단편영화 불씨]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 6</div>
+        <div class="project-info">
+          <h3>단편영화 [불씨]</h3>
+          <p><span class="info-label">기간</span> 2025.06 ~ 2025.11</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> 학술제 참가</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 7 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 7 - 대구 MBC 열린TV]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 7</div>
+        <div class="project-info">
+          <h3>대구 MBC 열린TV 방영작 [읽어야 한다는 마음으로]</h3>
+          <p><span class="info-label">기간</span> 2025.10</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> AI 활용 영상 제작</p>
+        </div>
+      </div>
+
+      <!-- 프로젝트 8 -->
+      <div class="project-item">
+        <!--
+        🖼️ [썸네일 삽입 위치 8 - 영남대 스포츠 홍보단]
+        -->
+        <div class="project-thumb thumb-placeholder">🖼️ 썸네일 8</div>
+        <div class="project-info">
+          <h3>영남대 스포츠 홍보단 (인스타그램, 유튜브 운영)</h3>
+          <p><span class="info-label">기간</span> 2024.04 ~ 2025.12</p>
+          <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+          <p><span class="info-label">프로젝트 목적</span> 영남대학교 야구부, 유도부, 씨름부 홍보</p>
+          <p><span class="info-label">성과</span> 자발적으로 구성된 팀에서 학교 지원을 받아 새로운 홍보단 창설</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-card">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">함께 더 좋은 이야기를 만들어가고 싶습니다.</p>
+      <hr class="section-divider" />
+      <div class="contact-grid">
+        <div class="contact-card">
+          <span class="contact-icon">✉</span>
+          <div>
+            <p class="contact-label">email</p>
+            <!--
+            ✏️ [이메일 수정 위치]
+            아래 href와 텍스트를 본인 이메일로 수정하세요.
+            -->
+            <a href="mailto:abcdefg123@gmail.com" class="contact-value">abcdefg123@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div>
+            <p class="contact-label">phone</p>
+            <!--
+            ✏️ [전화번호 수정 위치]
+            아래 href와 텍스트를 본인 번호로 수정하세요.
+            -->
+            <a href="tel:010-1234-5678" class="contact-value">010-1234-5678</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
