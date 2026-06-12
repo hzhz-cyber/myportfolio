@@ -443,6 +443,7 @@ section:first-of-type {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow: hidden;
 }
 
 .award-title {
@@ -536,9 +537,10 @@ section:first-of-type {
 /* ── CONTACT ── */
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 8px;
+    align-items: start;
 }
 
 .contact-card {
@@ -548,10 +550,12 @@ section:first-of-type {
     display: flex;
     align-items: center;
     gap: 16px;
+    min-width: 0;
 }
 
 .contact-icon {
     font-size: 22px;
+    flex-shrink: 0;
 }
 .contact-label {
     font-size: 11px;
@@ -561,11 +565,11 @@ section:first-of-type {
 .contact-value {
     font-size: 13.5px;
     font-weight: 500;
+    word-break: break-all;
 }
 .contact-value:hover {
     color: var(--accent);
 }
-
 /* ── 맨 위로 버튼 ── */
 #topBtn {
     position: fixed;
@@ -666,4 +670,11 @@ section:first-of-type {
     font-weight: 700;
     padding: 4px 14px;
     border-radius: 999px;
+}
+.award-card a img {
+    transition: transform 0.3s ease;
+}
+
+.award-card a:hover img {
+    transform: scale(1.05);
 }
