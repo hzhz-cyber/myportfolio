@@ -10,7 +10,7 @@
         <!-- ===== NAVIGATION ===== -->
         <nav id="navbar">
             <div class="nav-inner">
-                <span class="nav-logo">PORTFOLIO</span>
+                <img src="images/포폴로고.png" alt="로고" class="nav-logo" />
                 <ul class="nav-links">
                     <li><a href="#about">About me</a></li>
                     <li><a href="#certification">Certification</a></li>
@@ -23,7 +23,6 @@
                     <span></span><span></span><span></span>
                 </button>
             </div>
-            <!-- 모바일 드롭다운 -->
             <ul class="mobile-menu" id="mobileMenu">
                 <li><a href="#about">About me</a></li>
                 <li><a href="#certification">Certification</a></li>
@@ -53,15 +52,8 @@
                     </div>
                 </div>
 
+                <!-- [1] 사진 크기 2배: photo-placeholder가 440×560으로 CSS 변경 -->
                 <div class="hero-photo">
-                    <!--
-        =====================================================
-        📷 [사진 삽입 위치]
-        아래 <img> 태그의 src 속성에 본인 사진 경로를 넣어주세요.
-        예: src="images/profile.jpg"
-        현재는 회색 placeholder로 표시됩니다.
-        =====================================================
-        -->
                     <div class="photo-placeholder">
                         <img
                             src="/images/1 1.png"
@@ -173,7 +165,6 @@
                             <div class="skill-logo-box">Ae</div>
                             <span class="skill-name">After Effects</span>
                         </div>
-
                         <div class="skill-tags">
                             <span class="tag">#모션그래픽</span>
                             <span class="tag">#키네틱타이포</span>
@@ -181,7 +172,6 @@
                             <span class="tag">#애니메이션</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-header">
                             <div class="skill-logo-box">Ps</div>
@@ -194,20 +184,17 @@
                             <span class="tag">#상세페이지</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-header">
                             <div class="skill-logo-box">Ai</div>
                             <span class="skill-name">Illustrator</span>
                         </div>
-
                         <div class="skill-tags">
                             <span class="tag">#캐릭터디자인</span>
                             <span class="tag">#아이콘디자인</span>
                             <span class="tag">#벡터그래픽</span>
                         </div>
                     </div>
-
                     <div class="skill-item">
                         <div class="skill-header">
                             <div class="skill-logo-box">Fg</div>
@@ -222,6 +209,7 @@
                 </div>
             </div>
         </section>
+
         <!-- ===== AWARDS ===== -->
         <section id="awards">
             <div class="section-card">
@@ -231,99 +219,91 @@
                 <div class="awards-grid">
                     <!-- 수상 카드 1 -->
                     <div class="award-card">
-                        <p class="award-title">
-                            2023 영남대학교<br />영어 홍보 동영상 공모전<br /><strong>[대상]</strong>
-                        </p>
-                        <!--
-          =====================================================
-          🎬 [동영상 삽입 위치 1 - 2023 영남대학교 영어 홍보 동영상 공모전 대상]
-          아래 방법 중 하나를 선택하세요:
-
-          방법 A) 유튜브 임베드:
-            <iframe width="100%" height="160"
-              src="https://www.youtube.com/embed/유튜브_영상ID"
-              frameborder="0" allowfullscreen></iframe>
-
-          방법 B) 직접 업로드 영상:
-            <video controls width="100%">
-              <source src="videos/award1.mp4" type="video/mp4">
-            </video>
-          =====================================================
-          -->
-                        <a href="https://www.youtube.com/watch?v=DLLb8HkVdtI" target="_blank">
+                        <div class="award-header">
+                            <p class="award-title">2023 영남대학교<br />영어 홍보 동영상 공모전</p>
+                            <img src="images/대상.png" alt="대상" class="award-badge" />
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=DLLb8HkVdtI" target="_blank" class="award-thumb-link">
                             <img
                                 src="https://img.youtube.com/vi/DLLb8HkVdtI/hqdefault.jpg"
                                 alt="2023 영남대학교 영어 홍보 동영상 공모전 대상"
-                                style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px"
                             />
                         </a>
                     </div>
 
                     <!-- 수상 카드 2 -->
                     <div class="award-card">
-                        <p class="award-title">
-                            2023 영남대학교 학부<br />영어 홍보 동영상 공모전<br /><strong>[최우수상]</strong>
-                        </p>
-                        <!--
-          🎬 [동영상 삽입 위치 2 - 2023 영남대학교 학부 영어 홍보 동영상 공모전 최우수상]
-          위와 동일한 방법으로 삽입하세요.
-          -->
-                        <a href="https://www.youtube.com/watch?v=dYwms0oO0n8" target="_blank">
+                        <div class="award-header">
+                            <p class="award-title">2023 영남대학교 학부<br />영어 홍보 동영상 공모전</p>
+                            <img src="images/최우수상.png" alt="최우수상" class="award-badge" />
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=dYwms0oO0n8" target="_blank" class="award-thumb-link">
                             <img
                                 src="https://img.youtube.com/vi/dYwms0oO0n8/hqdefault.jpg"
                                 alt="2023 영남대학교 학부 영어 홍보 동영상 공모전 최우수상"
-                                style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px"
                             />
+                        </a>
+                    </div>
+
+                    <!-- 수상 카드 3 -->
+                    <div class="award-card">
+                        <div class="award-header">
+                            <p class="award-title">2024 제 1회<br />KNOU 숏폼 영상제</p>
+                            <img src="images/최우수상(1등).png" alt="최우수상" class="award-badge" />
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=V7-8blnIGEM" target="_blank" class="award-thumb-link">
+                            <img
+                                src="https://img.youtube.com/vi/V7-8blnIGEM/hqdefault.jpg"
+                                alt="제1회 KNOU 숏폼 영상제 최우수상"
+                            />
+                        </a>
+                    </div>
+
+                    <!-- 수상 카드 4 -->
+                    <div class="award-card">
+                        <div class="award-header">
+                            <p class="award-title">2024<br />구룡포 시장 숏폼 공모전</p>
+                            <img src="images/대상.png" alt="대상" class="award-badge" />
+                        </div>
+                        <a href="https://www.instagram.com/p/C_Skc6AyxU6/" target="_blank" class="award-thumb-link">
+                            <img src="images/구룡포썸네일.png" alt="구룡포 시장 숏폼 공모전 대상" />
                         </a>
                     </div>
 
                     <!-- 수상 카드 5 -->
                     <div class="award-card">
-                        <p class="award-title">제 1회 KNOU 숏폼 영상제<br /><strong>[최우수상]</strong></p>
-                        <!--
-          🎬 [동영상 삽입 위치 5 - 제1회 KNOU 숏폼 영상제 최우수상]
-          -->
-                        <a href="https://www.youtube.com/watch?v=V7-8blnIGEM" target="_blank">
-                            <img
-                                src="https://img.youtube.com/vi/V7-8blnIGEM/hqdefault.jpg"
-                                alt="제1회 KNOU 숏폼 영상제 최우수상"
-                                style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px"
-                            />
+                        <div class="award-header">
+                            <p class="award-title">
+                                2024 영남대학교 제 2회<br />
+                                동아리 홍보영상 공모전
+                            </p>
+                            <img src="images/대상.png" alt="대상" class="award-badge" />
+                        </div>
+                        <a
+                            href="https://drive.google.com/file/d/1SD3IL0DzvejpBJ2qEMjEWSnIJlChQ8Op/view?usp=sharing"
+                            target="_blank"
+                            class="award-thumb-link"
+                        >
+                            <img src="images/동아리 홍보영상 썸네일.png" alt="구룡포 시장 숏폼 공모전 대상" />
                         </a>
-                    </div>
-                    <!-- 수상 카드 3 -->
-                    <div class="award-card">
-                        <p class="award-title">2024 구룡포 시장<br />숏폼 공모전<br /><strong>[대상]</strong></p>
-                        <!--
-          🎬 [동영상 삽입 위치 3 - 2024 구룡포 시장 숏폼 공모전 대상]
-          -->
-                        <blockquote
-                            class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/p/C_Skc6AyxU6/"
-                            data-instgrm-version="14"
-                            style="width: 100%; border-radius: 10px"
-                        ></blockquote>
-                        <script async src="//www.instagram.com/embed.js"></script>
-                    </div>
-
-                    <!-- 수상 카드 4 -->
-                    <div class="award-card">
-                        <p class="award-title">
-                            2024 영남대학교<br />제 2회 동아리 홍보영상 공모전<br /><strong>[대상]</strong>
-                        </p>
-                        <!--
-          🎬 [동영상 삽입 위치 4 - 2024 영남대학교 제2회 동아리 홍보영상 공모전 대상]
-          -->
-                        <div class="video-placeholder">🎬 동영상 삽입 위치 4</div>
                     </div>
 
                     <!-- 수상 카드 6 -->
                     <div class="award-card">
-                        <p class="award-title">2024 YU 숏폼 챌린지<br /><strong>[장려상]</strong></p>
-                        <!--
-          🎬 [동영상 삽입 위치 6 - 2024 YU 숏폼 챌린지 장려상]
-          -->
-                        <div class="video-placeholder">🎬 동영상 삽입 위치 6</div>
+                        <div class="award-header">
+                            <p class="award-title">
+                                2024 <br />
+                                YU 숏폼 챌린지
+                            </p>
+                            <img src="images/장려상.png" alt="장려상" class="award-badge" />
+                        </div>
+                        <a
+                            href="https://www.instagram.com/reel/DD8sBEEPpGh/?utm_source=ig_web_button_share_sheet"
+                            target="_blank"
+                            class="award-thumb-link"
+                        >
+                            <img src="images/숏폼챌린지썸네일.png" alt="YU 숏폼 챌린지 장려상" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -336,132 +316,116 @@
                 <p class="section-sub">아이디어가 실제 콘텐츠가 되는 과정</p>
                 <hr class="section-divider" />
 
-                <!-- Branding 카테고리 -->
                 <span class="category-tag">Branding</span>
 
-                <!-- 프로젝트 1 -->
                 <div class="project-item">
-                    <!--
-        =====================================================
-        🖼️ [썸네일 삽입 위치 1 - 신한은행 대학생 홍보대사]
-        아래 div를 <img> 태그로 교체하거나 background-image를 설정하세요.
-        예: <img src="images/proj1-thumb.jpg" alt="신한은행 홍보대사" class="project-thumb" />
-        =====================================================
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 1</div>
                     <div class="project-info">
-                        <h3>신한은행 대학생 홍보대사 43기</h3>
-                        <p><span class="info-label">기간</span> 2025.08 ~ 2025.12</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> 대학생의 시선으로 신한은행을 브랜딩</p>
-                        <p><span class="info-label">성과</span> 조회수 100만, 10월 활동 우수팀 선정</p>
+                        <div class="project-info-body">
+                            <h3>신한은행 대학생 홍보대사 43기</h3>
+                            <p><span class="info-label">기간</span> 2025.08 ~ 2025.12</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> 대학생의 시선으로 신한은행을 브랜딩</p>
+                            <p><span class="info-label">성과</span> 조회수 100만, 10월 활동 우수팀 선정</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj1')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 2 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 2 - FC 캐논 인스타그램 및 유튜브 운영]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 2</div>
                     <div class="project-info">
-                        <h3>FC 캐논 인스타그램 및 유튜브 운영</h3>
-                        <p><span class="info-label">기간</span> 2024.09 ~ 2025.05</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> 유소년 축구부 홍보</p>
-                        <p><span class="info-label">성과</span> 활동비 인상</p>
+                        <div class="project-info-body">
+                            <h3>FC 캐논 인스타그램 및 유튜브 운영</h3>
+                            <p><span class="info-label">기간</span> 2024.09 ~ 2025.05</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> 유소년 축구부 홍보</p>
+                            <p><span class="info-label">성과</span> 활동비 인상</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj2')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 3 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 3 - YBM프렌즈 3기]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 3</div>
                     <div class="project-info">
-                        <h3>대학생 토익 숏폼 크리에이터 'YBM프렌즈 3기'</h3>
-                        <p><span class="info-label">기간</span> 2024.12 ~ 2025.02</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> YBM 교재 홍보 쇼츠 제작</p>
-                        <p><span class="info-label">성과</span> 최종 우수팀 선정, 이후 외주 의뢰 반응</p>
+                        <div class="project-info-body">
+                            <h3>대학생 토익 숏폼 크리에이터 'YBM프렌즈 3기'</h3>
+                            <p><span class="info-label">기간</span> 2024.12 ~ 2025.02</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> YBM 교재 홍보 쇼츠 제작</p>
+                            <p><span class="info-label">성과</span> 최종 우수팀 선정, 이후 외주 의뢰 반응</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj3')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 4 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 4 - 박카스 29초 영화제]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 4</div>
                     <div class="project-info">
-                        <h3>박카스 29초 영화제 [그럼에도 불구하고 힘껏. 마음껏.]</h3>
-                        <p><span class="info-label">기간</span> 2024.08</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영</p>
-                        <p><span class="info-label">프로젝트 목적</span> 박카스 홍보 영상 제작</p>
+                        <div class="project-info-body">
+                            <h3>박카스 29초 영화제 [그럼에도 불구하고 힘껏. 마음껏.]</h3>
+                            <p><span class="info-label">기간</span> 2024.08</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영</p>
+                            <p><span class="info-label">프로젝트 목적</span> 박카스 홍보 영상 제작</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj4')">더보기</button>
                     </div>
                 </div>
 
-                <!-- Team Project 카테고리 -->
                 <span class="category-tag" style="margin-top: 2rem">Team Project</span>
 
-                <!-- 프로젝트 5 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 5 - 영남대학교 야구부 다큐멘터리]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 5</div>
                     <div class="project-info">
-                        <h3>영남대학교 야구부 다큐멘터리 2편 제작</h3>
-                        <p><span class="info-label">기간</span> 2023.12 ~ 2025.01</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> 대학 야구부 다큐 제작</p>
-                        <p><span class="info-label">성과</span> KBS 열린채널 방영 - [En:try], [The season]</p>
+                        <div class="project-info-body">
+                            <h3>영남대학교 야구부 다큐멘터리 2편 제작</h3>
+                            <p><span class="info-label">기간</span> 2023.12 ~ 2025.01</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> 대학 야구부 다큐 제작</p>
+                            <p><span class="info-label">성과</span> KBS 열린채널 방영 - [En:try], [The season]</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj5')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 6 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 6 - 단편영화 불씨]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 6</div>
                     <div class="project-info">
-                        <h3>단편영화 [불씨]</h3>
-                        <p><span class="info-label">기간</span> 2025.06 ~ 2025.11</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> 학술제 참가</p>
+                        <div class="project-info-body">
+                            <h3>단편영화 [불씨]</h3>
+                            <p><span class="info-label">기간</span> 2025.06 ~ 2025.11</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> 학술제 참가</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj6')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 7 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 7 - 대구 MBC 열린TV]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 7</div>
                     <div class="project-info">
-                        <h3>대구 MBC 열린TV 방영작 [잊어야 한다는 마음으로]</h3>
-                        <p><span class="info-label">기간</span> 2025.10</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> AI 활용 영상 제작</p>
+                        <div class="project-info-body">
+                            <h3>대구 MBC 열린TV 방영작 [잊어야 한다는 마음으로]</h3>
+                            <p><span class="info-label">기간</span> 2025.10</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> AI 활용 영상 제작</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj7')">더보기</button>
                     </div>
                 </div>
 
-                <!-- 프로젝트 8 -->
                 <div class="project-item">
-                    <!--
-        🖼️ [썸네일 삽입 위치 8 - 영남대 스포츠 홍보단]
-        -->
                     <div class="project-thumb thumb-placeholder">🖼️ 썸네일 8</div>
                     <div class="project-info">
-                        <h3>영남대 스포츠 홍보단 (인스타그램, 유튜브 운영)</h3>
-                        <p><span class="info-label">기간</span> 2024.04 ~ 2025.12</p>
-                        <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
-                        <p><span class="info-label">프로젝트 목적</span> 영남대학교 야구부, 유도부, 씨름부 홍보</p>
-                        <p>
-                            <span class="info-label">성과</span> 홍보단 1기 창설
-                        </p>
+                        <div class="project-info-body">
+                            <h3>영남대 스포츠 홍보단 (인스타그램, 유튜브 운영)</h3>
+                            <p><span class="info-label">기간</span> 2024.04 ~ 2025.12</p>
+                            <p><span class="info-label">역할</span> 기획, 촬영, 편집</p>
+                            <p><span class="info-label">프로젝트 목적</span> 영남대학교 야구부, 유도부, 씨름부 홍보</p>
+                            <p><span class="info-label">성과</span> 홍보단 1기 창설</p>
+                        </div>
+                        <button class="more-btn" onclick="openDetail('proj8')">더보기</button>
                     </div>
                 </div>
             </div>
@@ -474,20 +438,33 @@
                 <p class="section-sub">함께 더 좋은 이야기를 만들어가고 싶습니다.</p>
                 <hr class="section-divider" />
                 <div class="contact-grid">
-                    <div class="contact-card">
+                    <!-- [4] 이메일: 클릭 시 복사 -->
+                    <div
+                        class="contact-card contact-copyable"
+                        data-copy="abcdefg123@gmail.com"
+                        data-label="이메일"
+                        onclick="copyContact(this)"
+                    >
                         <span class="contact-icon">✉</span>
                         <div>
                             <p class="contact-label">email</p>
-                            <a href="mailto:abcdefg123@gmail.com" class="contact-value">abcdefg123@gmail.com</a>
+                            <span class="contact-value">abcdefg123@gmail.com</span>
                         </div>
                     </div>
-                    <div class="contact-card">
+                    <!-- [4] 전화번호: 클릭 시 복사 -->
+                    <div
+                        class="contact-card contact-copyable"
+                        data-copy="010-1234-5678"
+                        data-label="전화번호"
+                        onclick="copyContact(this)"
+                    >
                         <span class="contact-icon">📞</span>
                         <div>
                             <p class="contact-label">phone</p>
-                            <a href="tel:010-1234-5678" class="contact-value">010-1234-5678</a>
+                            <span class="contact-value">010-1234-5678</span>
                         </div>
                     </div>
+                    <!-- 이력서: 기존 다운로드 유지 -->
                     <div class="contact-card">
                         <span class="contact-icon">📄</span>
                         <div>
@@ -498,6 +475,104 @@
                 </div>
             </div>
         </section>
+
+        <!-- ===== 프로젝트 상세 모달 ===== -->
+        <div id="projectModal" class="modal-overlay" onclick="closeDetailOnOverlay(event)">
+            <div class="modal-box">
+                <button class="modal-close" onclick="closeDetail()">✕</button>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+
+        <!-- [4] 복사 토스트 -->
+        <div class="copy-toast" id="copyToast"></div>
+
+        <script id="projectData" type="application/json">
+            {
+                "proj1": {
+                    "title": "신한은행 대학생 홍보대사 43기",
+                    "period": "2025.08 ~ 2025.12",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "대학생의 시선으로 신한은행을 브랜딩",
+                    "result": "조회수 100만, 10월 활동 우수팀 선정",
+                    "description": "대학생 홍보대사로 활동하며 신한은행의 다양한 서비스와 캠페인을 숏폼 영상으로 제작했습니다. 대학생의 일상에 자연스럽게 녹아드는 방식으로 브랜드 메시지를 전달하는 데 집중했습니다.",
+                    "tags": ["#브랜딩", "#숏폼", "#SNS콘텐츠"],
+                    "link": ""
+                },
+                "proj2": {
+                    "title": "FC 캐논 인스타그램 및 유튜브 운영",
+                    "period": "2024.09 ~ 2025.05",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "유소년 축구부 홍보",
+                    "result": "활동비 인상",
+                    "description": "유소년 축구부 FC 캐논의 SNS 채널을 운영하며 경기 하이라이트, 훈련 영상, 선수 인터뷰 등을 제작했습니다. 꾸준한 콘텐츠 업로드로 팀의 인지도를 높여 활동비 인상으로 이어졌습니다.",
+                    "tags": ["#스포츠", "#SNS운영", "#유튜브"],
+                    "link": ""
+                },
+                "proj3": {
+                    "title": "대학생 토익 숏폼 크리에이터 'YBM프렌즈 3기'",
+                    "period": "2024.12 ~ 2025.02",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "YBM 교재 홍보 쇼츠 제작",
+                    "result": "최종 우수팀 선정, 이후 외주 의뢰 반응",
+                    "description": "YBM의 토익 교재를 대학생 눈높이에 맞춰 홍보하는 숏폼 영상 시리즈를 기획·제작했습니다. 재미있고 유익한 콘텐츠로 최종 우수팀에 선정되었고, 이를 계기로 외주 의뢰 문의가 이어졌습니다.",
+                    "tags": ["#교육콘텐츠", "#쇼츠", "#브랜디드콘텐츠"],
+                    "link": ""
+                },
+                "proj4": {
+                    "title": "박카스 29초 영화제",
+                    "period": "2024.08",
+                    "role": "기획, 촬영",
+                    "goal": "박카스 홍보 영상 제작",
+                    "result": "",
+                    "description": "'그럼에도 불구하고 힘껏. 마음껏.'이라는 주제로 청년의 도전과 열정을 담은 29초 영상을 제작했습니다. 짧은 시간 안에 감정선을 전달하는 연출에 집중했습니다.",
+                    "tags": ["#단편영상", "#공모전", "#스토리텔링"],
+                    "link": ""
+                },
+                "proj5": {
+                    "title": "영남대학교 야구부 다큐멘터리 2편 제작",
+                    "period": "2023.12 ~ 2025.01",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "대학 야구부 다큐 제작",
+                    "result": "KBS 열린채널 방영 - [En:try], [The season]",
+                    "description": "영남대학교 야구부의 시즌을 밀착 취재하여 다큐멘터리 2편을 제작했습니다. 선수들의 땀과 노력, 팀의 성장 과정을 진솔하게 담아 KBS 열린채널에 방영되는 성과를 거뒀습니다.",
+                    "tags": ["#다큐멘터리", "#스포츠", "#KBS방영"],
+                    "link": ""
+                },
+                "proj6": {
+                    "title": "단편영화 [불씨]",
+                    "period": "2025.06 ~ 2025.11",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "학술제 참가",
+                    "result": "",
+                    "description": "작은 불씨 하나가 세상을 바꿀 수 있다는 메시지를 담은 단편영화입니다. 시나리오 기획부터 후반 편집까지 전 과정에 참여하며 완성도 높은 결과물을 만들었습니다.",
+                    "tags": ["#단편영화", "#학술제", "#시나리오"],
+                    "link": ""
+                },
+                "proj7": {
+                    "title": "대구 MBC 열린TV 방영작 [잊어야 한다는 마음으로]",
+                    "period": "2025.10",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "AI 활용 영상 제작",
+                    "result": "대구 MBC 열린TV 방영",
+                    "description": "AI 기술을 활용한 영상 제작 실험적 프로젝트로, 기억과 망각을 주제로 한 영상을 제작했습니다. 대구 MBC 열린TV에 방영되며 대중과 소통하는 기회를 가졌습니다.",
+                    "tags": ["#AI영상", "#MBC방영", "#실험영상"],
+                    "link": ""
+                },
+                "proj8": {
+                    "title": "영남대 스포츠 홍보단",
+                    "period": "2024.04 ~ 2025.12",
+                    "role": "기획, 촬영, 편집",
+                    "goal": "영남대학교 야구부, 유도부, 씨름부 홍보",
+                    "result": "홍보단 1기 창설",
+                    "description": "영남대학교 스포츠 홍보단 1기로 참여하여 야구부, 유도부, 씨름부의 인스타그램 및 유튜브 채널을 운영했습니다. 각 종목의 특성을 살린 콘텐츠로 대학 스포츠의 매력을 알렸습니다.",
+                    "tags": ["#스포츠홍보", "#SNS운영", "#대학스포츠"],
+                    "link": ""
+                }
+            }
+        </script>
+
+        <button id="topBtn" aria-label="맨 위로">↑</button>
 
         <script src="script.js"></script>
     </body>

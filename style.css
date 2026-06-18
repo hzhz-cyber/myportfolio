@@ -72,9 +72,9 @@ img {
 }
 
 .nav-logo {
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.08em;
+    height: 30px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
@@ -83,14 +83,15 @@ img {
 }
 
 .nav-links a {
-    font-size: 13.5px;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--text-muted);
     transition: color 0.2s;
+    display: inline-block;
 }
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--accent);
-    font-weight: 600;
 }
 
 /* 햄버거 버튼 */
@@ -126,8 +127,9 @@ img {
 .mobile-menu li a {
     display: block;
     padding: 10px 24px;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-muted);
+    transition: color 0.2s;
 }
 .mobile-menu li a:hover {
     color: var(--accent);
@@ -179,12 +181,12 @@ section:first-of-type {
 }
 
 .hero-inner {
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh - 56px - 80px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    padding: 60px 24px;
+    padding: 32px 24px;
 }
 
 .hero-text {
@@ -243,14 +245,14 @@ section:first-of-type {
     border-color: var(--accent);
 }
 
-/* 프로필 사진 자리 */
+/* [1] 프로필 사진 2배: 220×280 → 440×560 */
 .hero-photo {
     flex: 0 0 auto;
 }
 
 .photo-placeholder {
-    width: 220px;
-    height: 280px;
+    width: 300px;
+    height: 380px;
     border-radius: 16px;
     background: #e0ddf5;
     display: flex;
@@ -268,14 +270,6 @@ section:first-of-type {
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
-}
-
-.photo-placeholder-label {
-    font-size: 13px;
-    color: var(--accent);
-    text-align: center;
-    line-height: 1.8;
-    pointer-events: none;
 }
 
 /* ── ABOUT ME ── */
@@ -299,10 +293,6 @@ section:first-of-type {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 10px;
-}
-
-.about-col-icon {
-    font-size: 16px;
 }
 
 .about-col ul {
@@ -446,13 +436,69 @@ section:first-of-type {
     overflow: hidden;
 }
 
+.award-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
 .award-title {
     font-size: 12.5px;
     line-height: 1.6;
     color: var(--text-muted);
+    flex: 1;
 }
-.award-title strong {
-    color: var(--text);
+
+.award-badge {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* [3] 썸네일 링크 스타일 */
+.award-thumb-link {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.award-thumb-link img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.award-thumb-link:hover img {
+    transform: scale(1.05);
+}
+
+/* [2] 링크형 플레이스홀더 (구룡포, YU 숏폼) */
+.award-thumb-link-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 2px dashed #444;
+    color: #aaa;
+    font-size: 13px;
+    gap: 8px;
+    transition:
+        background 0.2s,
+        color 0.2s;
+    text-decoration: none;
+}
+.award-thumb-link-placeholder:hover {
+    background: #2a2a2a;
+    color: var(--accent-lt);
+}
+.award-thumb-link-placeholder .play-icon {
+    font-size: 22px;
 }
 
 /* 동영상 자리 */
@@ -486,7 +532,7 @@ section:first-of-type {
 .project-item {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch; /* [3] 썸네일이 info 높이에 맞게 늘어남 */
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
@@ -496,11 +542,12 @@ section:first-of-type {
     margin-bottom: 0;
 }
 
+/* 썸네일: 너비 확대, 높이는 info 영역에 맞게 stretch */
 .project-thumb {
-    flex: 0 0 200px;
-    height: 120px;
+    flex: 0 0 260px;
     border-radius: var(--inner-radius);
     object-fit: cover;
+    align-self: stretch;
 }
 
 .thumb-placeholder {
@@ -511,10 +558,26 @@ section:first-of-type {
     font-size: 12px;
     color: #888;
     border: 2px dashed #444;
+    height: 100%;
+    min-height: 140px;
 }
 
 .project-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+/* 텍스트 영역이 남은 공간을 채워 버튼을 항상 하단으로 밀어냄 */
+.project-info-body {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 .project-info h3 {
     font-size: 15px;
@@ -532,6 +595,134 @@ section:first-of-type {
     color: var(--text);
     font-weight: 600;
     margin-right: 4px;
+}
+
+/* 더보기 버튼: flex 하단 정렬 */
+.more-btn {
+    align-self: flex-end;
+    margin-top: 12px;
+    display: inline-block;
+    background: none;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+.more-btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* ── 프로젝트 상세 모달 ── */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: var(--text);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--text);
+    padding-right: 24px;
+    line-height: 1.4;
+}
+
+.modal-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.modal-meta-label {
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+}
+.modal-meta-value {
+    color: var(--text-muted);
+}
+
+.modal-desc {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.modal-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-lt);
+    transition: color 0.2s;
+}
+.modal-link:hover {
+    color: #6a5fb0;
 }
 
 /* ── CONTACT ── */
@@ -570,6 +761,40 @@ section:first-of-type {
 .contact-value:hover {
     color: var(--accent);
 }
+
+/* [4] 복사 가능한 contact 항목 커서 */
+.contact-copyable {
+    cursor: pointer;
+    user-select: none;
+}
+.contact-copyable:hover .contact-value {
+    color: var(--accent);
+}
+
+/* [4] 복사 토스트 */
+.copy-toast {
+    position: fixed;
+    bottom: 88px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 13px;
+    padding: 9px 20px;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.25s,
+        transform 0.25s;
+    z-index: 400;
+    white-space: nowrap;
+}
+.copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 /* ── 맨 위로 버튼 ── */
 #topBtn {
     position: fixed;
@@ -609,16 +834,19 @@ section:first-of-type {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
-        padding: 48px 16px;
+        padding: 28px 16px;
         min-height: auto;
     }
 
     .hero-btns {
         justify-content: center;
     }
+
+    /* [1] 모바일: 2배 기준에서 비율 유지하되 화면에 맞게 축소 */
     .photo-placeholder {
-        width: 160px;
-        height: 200px;
+        width: min(240px, 70vw);
+        height: auto;
+        aspect-ratio: 300 / 380;
     }
 
     .about-grid {
@@ -648,8 +876,15 @@ section:first-of-type {
         width: 100%;
         height: 180px;
     }
+    .thumb-placeholder {
+        height: 180px;
+    }
 
     .section-card {
+        padding: 28px 20px;
+    }
+
+    .modal-box {
         padding: 28px 20px;
     }
 }
@@ -662,6 +897,8 @@ section:first-of-type {
         grid-template-columns: 1fr;
     }
 }
+
+/* ── 기타 공통 ── */
 .about-col-tag {
     display: inline-block;
     background: var(--accent);
@@ -670,11 +907,4 @@ section:first-of-type {
     font-weight: 700;
     padding: 4px 14px;
     border-radius: 999px;
-}
-.award-card a img {
-    transition: transform 0.3s ease;
-}
-
-.award-card a:hover img {
-    transform: scale(1.05);
 }

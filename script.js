@@ -90,3 +90,96 @@ if (topBtn) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+// ── [4] Contact 클립보드 복사 ──
+const copyToast = document.getElementById("copyToast");
+let toastTimer = null;
+
+function copyContact(el) {
+    const text = el.dataset.copy;
+    const label = el.dataset.label || "텍스트";
+
+    if (!text) return;
+
+    navigator.clipboard
+        .writeText(text)
+        .then(() => {
+            showToast(`${label}가 복사되었습니다`);
+        })
+        .catch(() => {
+            // clipboard API 미지원 환경 fallback
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.cssText = "position:fixed;top:-9999px;left:-9999px;opacity:0";
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try {
+                document.execCommand("copy");
+                showToast(`${label}가 복사되었습니다`);
+            } catch {
+                showToast("복사에 실패했습니다");
+            }
+            document.body.removeChild(ta);
+        });
+}
+
+function showToast(msg) {
+    copyToast.textContent = msg;
+    copyToast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+        copyToast.classList.remove("show");
+    }, 2000);
+}
+
+// ── 프로젝트 더보기 모달 ──
+const projectDataEl = document.getElementById("projectData");
+const projectData = projectDataEl ? JSON.parse(projectDataEl.textContent) : {};
+const modal = document.getElementById("projectModal");
+const modalContent = document.getElementById("modalContent");
+
+function openDetail(projId) {
+    const proj = projectData[projId];
+    if (!proj) return;
+
+    const tagsHtml = proj.tags.map((t) => `<span class="tag">${t}</span>`).join("");
+
+    const resultRow = proj.result
+        ? `<span class="modal-meta-label">성과</span><span class="modal-meta-value">${proj.result}</span>`
+        : "";
+
+    const linkHtml = proj.link ? `<a href="${proj.link}" target="_blank" class="modal-link">🔗 영상 보러가기</a>` : "";
+
+    modalContent.innerHTML = `
+        <h2 class="modal-title">${proj.title}</h2>
+        <div class="modal-meta">
+            <span class="modal-meta-label">기간</span>
+            <span class="modal-meta-value">${proj.period}</span>
+            <span class="modal-meta-label">역할</span>
+            <span class="modal-meta-value">${proj.role}</span>
+            <span class="modal-meta-label">목적</span>
+            <span class="modal-meta-value">${proj.goal}</span>
+            ${resultRow}
+        </div>
+        <p class="modal-desc">${proj.description}</p>
+        <div class="modal-tags">${tagsHtml}</div>
+        ${linkHtml}
+    `;
+
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closeDetail() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+}
+
+function closeDetailOnOverlay(e) {
+    if (e.target === modal) closeDetail();
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDetail();
+});
