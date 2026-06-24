@@ -91,7 +91,7 @@ if (topBtn) {
     });
 }
 
-// ── [4] Contact 클립보드 복사 ──
+// ── Contact 클립보드 복사 ──
 const copyToast = document.getElementById("copyToast");
 let toastTimer = null;
 
@@ -107,7 +107,6 @@ function copyContact(el) {
             showToast(`${label}가 복사되었습니다`);
         })
         .catch(() => {
-            // clipboard API 미지원 환경 fallback
             const ta = document.createElement("textarea");
             ta.value = text;
             ta.style.cssText = "position:fixed;top:-9999px;left:-9999px;opacity:0";
@@ -153,15 +152,35 @@ function openDetail(projId) {
 
     modalContent.innerHTML = `
         <h2 class="modal-title">${proj.title}</h2>
-        <div class="modal-meta">
-            <span class="modal-meta-label">기간</span>
-            <span class="modal-meta-value">${proj.period}</span>
-            <span class="modal-meta-label">역할</span>
-            <span class="modal-meta-value">${proj.role}</span>
-            <span class="modal-meta-label">목적</span>
-            <span class="modal-meta-value">${proj.goal}</span>
-            ${resultRow}
+      <div class="modal-meta">
+
+    <div class="modal-meta-item">
+        <span class="modal-meta-label">기간</span>
+        <span class="modal-meta-value">${proj.period}</span>
+    </div>
+
+    <div class="modal-meta-item">
+        <span class="modal-meta-label">역할</span>
+        <span class="modal-meta-value">${proj.role}</span>
+    </div>
+
+    <div class="modal-meta-item">
+        <span class="modal-meta-label">목적</span>
+        <span class="modal-meta-value">${proj.goal}</span>
+    </div>
+
+    ${
+        proj.result
+            ? `
+        <div class="modal-meta-item">
+            <span class="modal-meta-label">성과</span>
+            <span class="modal-meta-value">${proj.result}</span>
         </div>
+    `
+            : ""
+    }
+
+</div>
         <p class="modal-desc">${proj.description}</p>
         <div class="modal-tags">${tagsHtml}</div>
         ${linkHtml}
@@ -180,6 +199,27 @@ function closeDetailOnOverlay(e) {
     if (e.target === modal) closeDetail();
 }
 
+// ── [2] YU 숏폼 챌린지 수상작 모달 ──
+const awardModal = document.getElementById("awardModal");
+
+function openAwardModal() {
+    awardModal.classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closeAwardModal() {
+    awardModal.classList.remove("open");
+    document.body.style.overflow = "";
+}
+
+function closeAwardModalOnOverlay(e) {
+    if (e.target === awardModal) closeAwardModal();
+}
+
+// ── ESC 키로 모든 모달 닫기 ──
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeDetail();
+    if (e.key === "Escape") {
+        closeDetail();
+        closeAwardModal();
+    }
 });
